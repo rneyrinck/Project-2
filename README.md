@@ -1,6 +1,6 @@
 # Project-2 OverView -> GALAXY TRADING CARDS
 
-![Gif of Galaxy](https://c.tenor.com/4wAtE3WwF1wAAAAd/space-gif-space.gif)
+![Gif of Galaxy](./README.md/READMEIMAGES\space-gif-space.gif)
 
 ## Project Links
 
@@ -126,14 +126,14 @@ define react componenets and architectural design of app
 - [wireframes link -> high fidelity mockup]()
 - [link to react architecture]()
 #### React Architecture(includes postMVP) 
-![react architecture](READMEIMAGES\ReactStructureGTC.png)
+![react architecture](./READMEIMAGES\ReactStructureGTC.png)
 #### MVP Wireframe
-![mvp wire frame](/READMEIMAGES\MvpWireFrameGTC.png)
+![mvp wire frame](./READMEIMAGES\MvpWireFrameGTC.png)
 
 ### MVP/PostMVP
 #### postMVP Wireframe
-![post mvp wire frame p1](/READMEIMAGES\PostMvpWireFrameP1GTC.png)
-![post mvp wire frame p2](/READMEIMAGES\PostMvpWireFrameP2GTC.png)
+![post mvp wire frame p1](./READMEIMAGES\PostMvpWireFrameP1GTC.png)
+![post mvp wire frame p2](./READMEIMAGES\PostMvpWireFrameP2GTC.png)
 
 #### MVP ex
 
