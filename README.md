@@ -4,6 +4,19 @@
 - [Github Repo]()
 - [Project on githubpages]()
 
+#### Requirements - delete later
+#### Your website must:
+- Be a working, interactive, React application.
+- Include data from a third-party API.
+    - TRY OUT your API in the browser by making an fetch request before you get too emotionally invested in it, to make sure it works the way you think it does...**YOU ARE REQUIRED TO SHOW US YOU CAN RECEIVE THE DATA FOR YOUR PROPOSAL**
+- Include React Router with at least 2 routes
+- Have at least 5 separate components, using a readable file structure.
+- Be built using Create React App.
+- Built mobile first 
+- Implement responsive design using flexbox, grid, or another css framework.
+- Use React Hooks
+- Be deployed on [github pages](https://github.com/gitname/react-gh-pages)
+
 ## Description 
 lorem ispom dolor sit amet
 
