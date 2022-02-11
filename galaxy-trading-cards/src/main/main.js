@@ -5,10 +5,12 @@ import Generator from "../generator/generator";
 const Main = () => {
   return (
     <main>
-      <Routes>
-        <Route to="/Generator" element={<Generator/>} />
-        <Route to="/About" element={<About/>} />
+       
+       <Routes>
+        <Route path="/" element={<Generator/>}/>
+        <Route path='/About' element={<About/>}/>
       </Routes>
+      
     </main>
   );
 };

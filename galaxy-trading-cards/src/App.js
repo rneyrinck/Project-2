@@ -1,6 +1,8 @@
 
 import './App.css';
 import Footer from './footer/footer';
+import GalaxyCard from './galaxyCard/galaxyCard';
+import Generator from './generator/generator';
 import Header from './header/header';
 import Main from './main/main';
 

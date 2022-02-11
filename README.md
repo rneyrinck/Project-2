@@ -185,16 +185,16 @@ break down logic into stateless/stateful components
 
 | Component        | Priority | Estimated Time | Time Invetsted | Actual Time |
 | ---------------- | :------: | :------------: | :------------: | :---------: |
-| File Structure   |    H     |      2hrs      |                |             |
+| File Structure   |    H     |      2hrs      |      1 hr      |             |
 | Working with API |    H     |      3hrs      |                |             |
 | Rend components  |    H     |      5hrs      |                |             |
 | Acheive API call |    H     |      2hrs      |                |             |
 | Generator        |    H     |      5hrs      |                |             |
 | GenButton        |    H     |      1hrs      |                |             |
-| About            |    M     |      1hrs      |                |             |
+| About            |    M     |      1hrs      |     20min      |             |
 | Hamburg          |    M     |      5hrs      |                |             |
-| Footer           |    M     |      .5hrs     |                |             |
-| Header           |    M     |      .5hrs     |                |             |
+| Footer           |    M     |      .5hrs     |     20min      |             |
+| Header           |    M     |      .5hrs     |     20min      |             |
 | MyCollect        |    L     |      7hrs      |                |             |
 | ColBtn           |    L     |      4hrs      |                |             |
 | SmlCard          |    L     |      6hrs      |                |             |
