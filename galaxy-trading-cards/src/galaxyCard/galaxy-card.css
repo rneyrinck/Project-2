@@ -1,0 +1,26 @@
+.galaxy-card{
+    margin: 2rem;
+   background: #0044FF;
+    background-blend-mode: color-dodge;
+    border-radius: 31px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 14px;
+}
+.galaxy-card-title{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+.galaxy-card h3{
+    font-size: 40px;
+    color: #0F1011;
+    text-align: center;
+}
+.galaxy-image{
+    width: 100%;
+    height: 100%;
+    border-radius: 0px 0px 20px 20px;
+}

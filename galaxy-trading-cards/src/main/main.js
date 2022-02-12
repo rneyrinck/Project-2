@@ -1,7 +1,7 @@
 import { Route, Routes } from "react-router";
 import About from "../about/about";
 import Generator from "../generator/generator";
-
+import './main.css'
 const Main = () => {
   return (
     <main>

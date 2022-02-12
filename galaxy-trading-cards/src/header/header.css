@@ -1,0 +1,24 @@
+header{
+    background-color: #DCE4FF;
+    background-blend-mode: multiply;
+    display: flex;
+    flex-direction: row;  
+    align-items: center;
+    justify-content: space-around;
+    height: 6rem;
+}
+nav{
+    display: flex;
+    gap: 10px;
+    align-self: center;
+}
+.gtc-title{
+    color: #CFFF69;
+    text-decoration: none;
+}
+.nav {
+    text-decoration: none;
+}
+.about-link{
+    color: #CCD2E3;
+}
