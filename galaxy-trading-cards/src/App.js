@@ -16,21 +16,28 @@ function App() {
     let min = Math.ceil(1)
     let max = Math.floor(19)
     let pageMath = Math.floor(Math.random()*(max-min)+min)
-    let pageUrl = `&page=${pageMath}`  
-    console.log(pageUrl)
+    let pageNumber = `&page=${pageMath}`  
+    console.log(pageNumber)
     return(
-     pageUrl
+     pageNumber
     )
   }
   randomPage()
  
   // set state for GalaxyCard info
-  const [galaxyList,setGalaxyList] = useState([])
+  const [galaxyList,setGalaxyList] = useState([{"href":'1'},{"href":'2'},{"href":'3'}])
   // function for random selection of galaxy items after api call
   const randomGalaxy = () => {
-    // 
+    let min = Math.ceil(0)
+    let max = Math.floor(galaxyList.length)
+    let randomGalaxyMath = Math.floor(Math.random()*(max-min)+min)
+    let galaxyPick = galaxyList[randomGalaxyMath]
+    return(
+      console.log(galaxyPick)
+    )
   }
-
+  
+ randomGalaxy()
   // create function that uses fetch to call the nasa api
   const getGalaxyAPI = () => {
     const url = `${urlGalaxy}${randomPage}` 
