@@ -5,7 +5,7 @@ const Generator = () => {
     return (
         <section>
             <GalaxyCard />
-            {/* <GeneratorBtn /> */}
+            <GeneratorBtn />
         </section>
     )
 }

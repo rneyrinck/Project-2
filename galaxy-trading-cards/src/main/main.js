@@ -7,7 +7,7 @@ const Main = () => {
     <main>
        
        <Routes>
-        <Route path="/" element={<Generator/>}/>
+        <Route path="/" element={<Generator />}/>
         <Route path='/About' element={<About/>}/>
       </Routes>
       

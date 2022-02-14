@@ -10,7 +10,7 @@ function App() {
   const urlGalaxy = "https://images-api.nasa.gov/search?q=galaxy&page=";
 
   // set state for GalaxyList data info
-  const [galaxyList, setGalaxyList] = useState();
+  const [galaxyList, setGalaxyList] = useState([]);
 
   // set state for galaxy card generated
   const [galaxyCard, setGalaxyCard] = useState();
@@ -19,38 +19,40 @@ function App() {
   
   // randomPage()
   // function for random selection of galaxy items after api call
-  
+  const randomPage = () => {
+      // resource for MATH https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/random
+    
+      let min = Math.ceil(1);
+    let max = Math.floor(19);
+    let pageMath = Math.floor(Math.random() * (max - min) + min);
+    // console.log(pageMath)
+    return pageMath;
+  };
+  const randomGalaxy = () => {
+    let min = Math.ceil(0);
+    let max = Math.floor(galaxyList.length);
+    let randomGalaxyMath = Math.floor(Math.random() * (max - min) + min);
+    // console.log(randomGalaxyMath)
+    return randomGalaxyMath;
+  };
   // create function that uses fetch to call the nasa api
   const getGalaxyAPI = () => {
-  
-    const randomPage = () => {
-        // resource for MATH https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/random
-      
-        let min = Math.ceil(1);
-      let max = Math.floor(19);
-      let pageMath = Math.floor(Math.random() * (max - min) + min);
-      // console.log(pageMath)
-      return pageMath;
-    };
-    const randomGalaxy = () => {
-      let min = Math.ceil(0);
-      let max = Math.floor(galaxyList.length);
-      let randomGalaxyMath = Math.floor(Math.random() * (max - min) + min);
-      // console.log(randomGalaxyMath)
-      return randomGalaxyMath;
-    };
-    const url = `${urlGalaxy}${randomPage()}`;
-    // console.log(url)
+    const randomPageChoice = randomPage();
+    console.log(randomPageChoice)
+    const randomGalaxyChoice = randomGalaxy()
+    console.log(randomGalaxyChoice)
+    const url = `${urlGalaxy}${randomPageChoice}`;
+    console.log(url)
+    
     fetch(url)
       .then((res) => res.json())
 
       .then((data) => setGalaxyList(data.collection.items))
     
-      .then(() => setGalaxyCard(galaxyList[randomGalaxy()]))
-    
       .catch(() => console.log("issue in getGalaxyAPI, App.js line 38"))
+    setGalaxyCard(galaxyList[randomGalaxyChoice])
+    console.log(galaxyCard)
   };
-  // getGalaxyAPI()
   // console.log(galaxyCard)
 
   // take that getgalaxyAPI functin and send it to the button component
@@ -59,8 +61,9 @@ function App() {
   // because there will only be one component at a time we only need one state
   return (
     <div className="App">
+      <button onClick={getGalaxyAPI}>Get Galaxy</button>
       <Header />
-      <Main />
+      <Main getGalaxyAPI={getGalaxyAPI}/>
       <Footer />
     </div>
   );
