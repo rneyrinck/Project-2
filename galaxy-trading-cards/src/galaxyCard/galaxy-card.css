@@ -1,7 +1,7 @@
-.galaxy-card{
+article{
     margin: 2rem;
-   background: #0044FF;
-    background-blend-mode: color-dodge;
+   background: #8998fc7c;
+    background-blend-mode: hard-light, hard-light, normal, normal;
     border-radius: 31px;
     display: flex;
     flex-direction: column;
