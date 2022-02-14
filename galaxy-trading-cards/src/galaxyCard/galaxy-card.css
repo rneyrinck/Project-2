@@ -7,6 +7,7 @@ article{
     flex-direction: column;
     align-items: center;
     padding: 14px;
+    box-shadow: 0px 5px 5px rgba(0, 0, 0, 0.411);
 }
 .galaxy-card-title{
     display: flex;
@@ -19,8 +20,12 @@ article{
     color: #0F1011;
     text-align: center;
 }
+.card-info{
+    width: auto;
+    height: auto;
+}
 .galaxy-image{
-    width: 100%;
-    height: 100%;
+   width: 99%;
+   height: 99%;
     border-radius: 0px 0px 20px 20px;
 }

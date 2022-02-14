@@ -9,7 +9,7 @@ import Header from "./header/header";
 import Main from "./main/main";
 
 function App() {
-  const urlGalaxy = "https://images-api.nasa.gov/search?q=galaxy&page=";
+  const urlGalaxy = "https://images-api.nasa.gov/search?media_type=image&q=galaxy&page=";
 
   // set state for GalaxyList data info
   const [galaxyList, setGalaxyList] = useState([]);
@@ -30,7 +30,7 @@ function App() {
       // resource for MATH https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/random
 
       let min = Math.ceil(1);
-      let max = Math.floor(19);
+      let max = Math.floor(18);
       let pageMath = Math.floor(Math.random() * (max - min) + min);
       // console.log(pageMath)
       return pageMath;

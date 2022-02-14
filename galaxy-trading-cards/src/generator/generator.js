@@ -22,23 +22,23 @@ const Generator = (props) => {
           <div className="galaxy-card-title">
             <h3 className="galaxy-name">{props.galaxyCardData.data[0].title}</h3>
           </div>
-          <div className="card-info"><img src={props.galaxyCardData.links[0].href} alt=''/></div>
+          <div className="card-info"><img className="galaxy-image" src={props.galaxyCardData.links[0].href} alt=''/></div>
         </article>
       );
     } else {
       setGalaxyCardHTML(
         <article className="galaxy-card">
-          <div className="galaxy-card-title">
-            <h3 className="galaxy-name">{}</h3>
-          </div>
-          <div className="card-info"><img src={props} alt=''/></div>
-        </article>
+        <div className="galaxy-card-title">
+          <h3 className="galaxy-name">{props.galaxyCardData.data[0].title}</h3>
+        </div>
+        <div className="card-info"><img className=".galaxy-image" src={props.galaxyCardData.links[0].href} alt=''/></div>
+      </article>
       );
     }
   };
 
   return (
-    <section>
+    <section className="generator">
       <GalaxyCard galaxyCardHTML={galaxyCardHTML} />
 
       <button onClick={APICall}>* GENERATE *</button>

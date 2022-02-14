@@ -1,16 +1,19 @@
 header{
-    background-color: #DCE4FF;
-    background-blend-mode: multiply;
-    display: flex;
-    flex-direction: row;  
-    align-items: center;
-    justify-content: space-around;
+    background: #35427048;
+    background-blend-mode: revert;
     height: 6rem;
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.411);
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
 }
 nav{
     display: flex;
+    justify-content: space-between;
     gap: 10px;
     align-self: center;
+    align-items: baseline;
 }
 .gtc-title{
     color: #CFFF69;
