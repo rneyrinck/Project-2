@@ -11,7 +11,7 @@ const Header = () => {
         {/* make these links into a hamburger, onclick display */}
         <Link to="/" className='gtc-title'>GALAXY TRADING CARDS</Link>
         <Link to="/About" className='nav about-link'>About</Link>
-        <Link to="/" className='nav gen-link'><GeneratorBtn/></Link>
+        <Link to="/" className='nav gen-link' ><GeneratorBtn/></Link>
       </nav>
       
     </header>
