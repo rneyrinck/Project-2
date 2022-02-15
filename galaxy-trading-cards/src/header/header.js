@@ -7,9 +7,9 @@ import GeneratorBtn from '../generatorbtn/generatorBtn';
 const Header = () => {
   return (
     <header>
-      <nav>
         {/* make these links into a hamburger, onclick display */}
         <Link to="/" className='gtc-title'>GALAXY TRADING CARDS</Link>
+      <nav>
         <Link to="/About" className='nav about-link'>About</Link>
         <Link to="/" className='nav gen-link' >Generator</Link>
       </nav>
