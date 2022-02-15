@@ -5,15 +5,17 @@ button{
     /* margin: 0px 10px; */
     height: 51px;
     width: 171px;
-    display: flex;
+    /* display: flex; */
     align-items: center;
     justify-content: center;
     padding: 16px 20px;
     font-size: 18px;
     align-items: center;
     justify-self: center;
+    /* margin: 15px; */
 }
 .generator{
     display: grid;
     align-items: center;
+    height: 800px;
 }

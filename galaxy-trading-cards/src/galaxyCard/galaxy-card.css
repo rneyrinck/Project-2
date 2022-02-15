@@ -16,7 +16,7 @@ article{
     align-items: center;
 }
 .galaxy-card h3{
-    font-size: 40px;
+    font-size: 25px;
     color: #0F1011;
     text-align: center;
 }
@@ -25,7 +25,8 @@ article{
     height: auto;
 }
 .galaxy-image{
-   width: 99%;
-   height: 99%;
+
+   width: 350px;
+   height: 350px;
     border-radius: 0px 0px 20px 20px;
 }

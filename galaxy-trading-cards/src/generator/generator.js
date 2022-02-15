@@ -39,9 +39,9 @@ const Generator = (props) => {
 
   return (
     <section className="generator">
+      <button onClick={APICall}>* GENERATE *</button>
       <GalaxyCard galaxyCardHTML={galaxyCardHTML} />
 
-      <button onClick={APICall}>* GENERATE *</button>
     </section>
   );
 };

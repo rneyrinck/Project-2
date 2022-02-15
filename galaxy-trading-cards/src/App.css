@@ -1,9 +1,10 @@
 .App {
+  margin: -10px;
   text-align: center;
-  height: 100vh;
+  /* height: 100vh; */
   display: grid;
   grid-template-columns: 1fr;
-  grid-template-rows: 1rem, 20rem, 1rem;
+  grid-template-rows: 1rem, 800px, 1rem;
   background: radial-gradient(
       163.35% 105.57% at 45.62% 45.35%,
       rgba(106, 120, 247, 0.4) 0%,
