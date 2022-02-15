@@ -6,29 +6,26 @@ const About = () => {
       <div className="main-text">
         <h1>About</h1>
         <p>
-          App for randomly generating a trading card with an image of a galaxy,
-          that galaxies name, and in future versions, giving information about
-          that galaxy and allowing the user to collect, download and trade those
-          cards.
-
-          Implementing NASA's image library API, with the keyword 'Galaxy', this
-          App returns a randomly selected galaxy card from 1774 different
-          options in the API. 
+          This app implements NASA's images and videos API to generate a trading
+          card game inspired galaxy card.
           <br />
-          
-          The MVP will be a proof of concept limiting the scope to a galaxy card
-          generator with an about page describing the app.
-          
-          Upon future iterations new features will be added, such as a card
-          click feature where when a user generates a card they can flip it to
-          read more information on that card.
+          <br />
+          In the future iterations a feature to download favorite cards, add
+          them to a collection, or even turn them into nft collectibles are all
+          on the horizon.
+          <br />
+          <br />
+          Check out some of my other projects in my portfolio by clicking on my picture below.
         </p>
       </div>
       <div className="img-hero">
-        <img src="https://rneyrinck.github.io/Portfolio/me3.png" alt="pic-o-bob" />
+        <a href="https://rneyrinck.github.io/Portfolio.v.2/"><img
+          src="https://rneyrinck.github.io/Portfolio/me3.png"
+          alt="pic-o-bob"
+        /></a>
         <div className="img-text">
-        <h6>Robert Neyrinck</h6>
-        <p>Software Engineer</p>
+          <h6>Robert Neyrinck</h6>
+          <p>Software Engineer</p>
         </div>
       </div>
     </section>
