@@ -138,17 +138,17 @@ define react componenets and architectural design of app
 #### MVP ex
 
 - Header, footer & nav functionality complete
-    * header/footer stay on page
-    * nav bar component appears on click in
-    * nav bar component disapears on click out
+    * [x] header/footer stay on page
+    * [n/a] nav bar component appears on click in
+    * [n/a] nav bar component disapears on click out
 - Main
     * generator page
-        - API call works, data is pulled, card displayed
-        - button creates new random card with image & name
+        - [x] API call works, data is pulled, card displayed
+        - [x] button creates new random card with image & name
     * about 
-        - links to portfolio, contact info
-        - description of product w/ postmvp
-        - pic-o-bob
+        - [x] links to portfolio, contact info
+        - [x] description of product w/ postmvp
+        - [x] pic-o-bob
 
 #### PostMVP ex
 
