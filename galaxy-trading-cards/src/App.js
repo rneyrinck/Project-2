@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { Route, Routes } from "react-router";
 import About from "./about/about";
 import "./App.css";
@@ -17,9 +17,17 @@ function App() {
   // set state for galaxy card generated
   const [galaxyCardData, setGalaxyCardData] = useState()
 
-  
+  const [collectionData, setCollectionData] = useState([])
+  const [cardToAdd, setCardToAdd] = useState()
   // need random formula for which page to send the url to out of 18 total pages
   // example of 18th page -> https://images-api.nasa.gov/search?q=galaxy&page=18
+  const addToCollection = () => {
+    setCardToAdd(galaxyCardData)
+    const copy = [...collectionData]
+    setCollectionData(copy.push(cardToAdd))
+    console.log(collectionData)
+  }
+
 
   // randomPage()
   // function for random selection of galaxy items after api call
@@ -68,7 +76,7 @@ function App() {
     <div className="App">
       <Header />
       <Routes>
-        <Route path="*" element={<Generator getGalaxyAPI={getGalaxyAPI} galaxyCardData={galaxyCardData}/>}/>
+        <Route path="*" element={<Generator getGalaxyAPI={getGalaxyAPI} galaxyCardData={galaxyCardData} collectionData={collectionData} setCollectionData={setCollectionData} addToCollection={addToCollection}/>}/>
         <Route path='/About' element={<About/>}/>
       </Routes>
       {/* <Main galaxyList={galaxyList} setGalaxyList={setGalaxyList} galaxyCard={galaxyCard} setGalaxyCard={setGalaxyCard} getGalaxyAPI={getGalaxyAPI} urlGalaxy={urlGalaxy}/> */}

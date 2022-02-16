@@ -1,47 +1,86 @@
-
 import { useEffect, useState } from "react";
+import {
+  Button,
+  ButtonGroup,
+  ButtonToolbar,
+  Card,
+  Container,
+  Dropdown,
+  DropdownButton,
+  Nav,
+  Navbar,
+  NavDropdown,
+} from "react-bootstrap";
+import { BsBookmarkXFill,BsBookmarkPlus,BsDownload,BsShare  } from "react-icons/bs";
 
 import GalaxyCard from "../galaxyCard/galaxyCard";
 
 import "./generator.css";
 const Generator = (props) => {
   const [galaxyCardHTML, setGalaxyCardHTML] = useState(
-    <article className="galaxy-card">
-      <div className="galaxy-card-title">
-        <h3 className="galaxy-name">What Galaxy Will You Get?</h3>
-      </div>
-      <div className="card-info"></div>
-    </article>
+    <Card>
+      <Card.Body>What will you get?</Card.Body>
+    </Card>
   );
+  
+  const [collectionData, setCollectionData] = useState([])
   const APICall = () => {
     props.getGalaxyAPI();
 
     if (props.galaxyCardData) {
       setGalaxyCardHTML(
-        <article className="galaxy-card">
-          <div className="galaxy-card-title">
-            <h3 className="galaxy-name">{props.galaxyCardData.data[0].title}</h3>
-          </div>
-          <div className="card-info"><img className="galaxy-image" src={props.galaxyCardData.links[0].href} alt=''/></div>
-        </article>
+        <>
+          <Card>
+            <Card.Header>{props.galaxyCardData.data[0].title}</Card.Header>
+            <Card.Img variant="top" src={props.galaxyCardData.links[0].href} />
+            <Card.Body>
+              <Navbar expand="lg">
+                <Container fluid>
+                  <Navbar.Toggle aria-controls="navbarScroll">
+                    <Navbar.Brand>
+                      {props.galaxyCardData.data[0].title}
+                    </Navbar.Brand>
+                  </Navbar.Toggle>
+                  <Navbar.Collapse id="navbarScroll">
+                    <Nav
+                      className="me-auto my-2 my-lg-0"
+                      style={{ maxHeight: "100px" }}
+                      navbarScroll
+                    >
+                      <Card.Text>
+                        {props.galaxyCardData.data[0].description}
+                      </Card.Text>
+                    </Nav>
+                  </Navbar.Collapse>
+                </Container>
+              </Navbar>
+            </Card.Body>
+          </Card>
+      {/* BsBookmarkXFill,BsBookmarkPlus,BsDownload,BsShare */}
+            <div className="socials">
+              <a className="svg_icons" onClick={props.addToCollection}><BsBookmarkPlus /></a>
+              <a className="svg_icons"><BsDownload/></a>
+              <a className="svg_icons"><BsShare /></a>
+            </div> 
+
+        </>
       );
     } else {
       setGalaxyCardHTML(
-        <article className="galaxy-card">
-        <div className="galaxy-card-title">
-          <h3 className="galaxy-name">{props.galaxyCardData.data[0].title}</h3>
-        </div>
-        <div className="card-info"><img className=".galaxy-image" src={props.galaxyCardData.links[0].href} alt=''/></div>
-      </article>
+        <Card>
+          <Card.Body>Click one more time!</Card.Body>
+        </Card>
       );
     }
   };
 
   return (
     <section className="generator">
-      <button onClick={APICall}>* GENERATE *</button>
       <GalaxyCard galaxyCardHTML={galaxyCardHTML} />
 
+      <button onClick={APICall}>
+        <span className="span-icon"></span> GENERATE
+      </button>
     </section>
   );
 };
