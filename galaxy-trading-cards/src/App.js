@@ -18,13 +18,8 @@ function App() {
   const [galaxyCardData, setGalaxyCardData] = useState()
 
   const [collectionData, setCollectionData] = useState([])
-  const [cardToAdd, setCardToAdd] = useState()
-  const addToCollection = () => {
-    setCardToAdd(galaxyCardData)
-    const copy = [...collectionData]
-    setCollectionData(copy.push(cardToAdd))
-    console.log(collectionData)
-  }
+  const [cardToAdd, setCardToAdd] = useState({})
+ 
 
 
   // randomPage()
@@ -64,6 +59,14 @@ function App() {
     
     // console.log(galaxyCard);
   };
+  const addToCollection = () => {
+    setCardToAdd(galaxyCardData)
+
+    const copy = [...collectionData]
+    copy.push(galaxyCardData)
+    setCollectionData(copy)
+    console.log(collectionData)
+  }
   // console.log(galaxyCard)
   // getGalaxyAPI()
   // take that getgalaxyAPI functin and send it to the button component

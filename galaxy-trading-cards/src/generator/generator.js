@@ -11,7 +11,12 @@ import {
   Navbar,
   NavDropdown,
 } from "react-bootstrap";
-import { BsBookmarkXFill,BsBookmarkPlus,BsDownload,BsShare  } from "react-icons/bs";
+import {
+  BsBookmarkXFill,
+  BsBookmarkPlus,
+  BsDownload,
+  BsShare,
+} from "react-icons/bs";
 
 import GalaxyCard from "../galaxyCard/galaxyCard";
 
@@ -22,15 +27,15 @@ const Generator = (props) => {
       <Card.Body>What will you get?</Card.Body>
     </Card>
   );
-  
-  
+
   const APICall = () => {
     props.getGalaxyAPI();
+    var node = document.getElementById("my-node");
 
     if (props.galaxyCardData) {
       setGalaxyCardHTML(
         <>
-          <Card>
+          <Card id="galCard">
             <Card.Header>{props.galaxyCardData.data[0].title}</Card.Header>
             <Card.Img variant="top" src={props.galaxyCardData.links[0].href} />
             <Card.Body>
@@ -56,13 +61,18 @@ const Generator = (props) => {
               </Navbar>
             </Card.Body>
           </Card>
-      {/* BsBookmarkXFill,BsBookmarkPlus,BsDownload,BsShare */}
-            <div className="socials">
-              <a className="svg_icons" onClick={props.addToCollection}><BsBookmarkPlus /></a>
-              <a className="svg_icons"><BsDownload/></a>
-              <a className="svg_icons"><BsShare /></a>
-            </div> 
-
+          {/* BsBookmarkXFill,BsBookmarkPlus,BsDownload,BsShare */}
+          <div className="socials">
+            <a className="svg_icons" onClick={props.addToCollection}>
+              <BsBookmarkPlus />
+            </a>
+            <a className="svg_icons">
+              <BsDownload />
+            </a>
+            <a className="svg_icons">
+              <BsShare />
+            </a>
+          </div>
         </>
       );
     } else {
