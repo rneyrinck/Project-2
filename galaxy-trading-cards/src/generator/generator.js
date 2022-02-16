@@ -23,7 +23,7 @@ const Generator = (props) => {
     </Card>
   );
   
-  const [collectionData, setCollectionData] = useState([])
+  
   const APICall = () => {
     props.getGalaxyAPI();
 

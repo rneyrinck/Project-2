@@ -19,8 +19,6 @@ function App() {
 
   const [collectionData, setCollectionData] = useState([])
   const [cardToAdd, setCardToAdd] = useState()
-  // need random formula for which page to send the url to out of 18 total pages
-  // example of 18th page -> https://images-api.nasa.gov/search?q=galaxy&page=18
   const addToCollection = () => {
     setCardToAdd(galaxyCardData)
     const copy = [...collectionData]
