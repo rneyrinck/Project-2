@@ -15,15 +15,16 @@ const About = () => {
           styling.
           <br />
           <br />
-         This is the first fully fleshed out app I've made and I learned alot during the process! In future projects, and continued iteration on this app, I'm looking forward to leaning into react-bootstrap for layout and responsive design.  
+          This is the first fully fleshed out app I've made and I learned alot
+          during the process! In future projects, and continued iteration on
+          this app, I'm looking forward to leaning into react-bootstrap for
+          layout and responsive design.
           <br />
           <br />
           Check out some of my other projects by clicking on my portfolio link
           below or click my name to connect on LinkedIn.
         </p>
         <div className="hero">
-          {/* <img src={process.env.PUBLIC_URL+"./me3.png"} /> */}
-
           <a href="https://www.linkedin.com/in/robert-neyrinck" target="_blank">
             {" "}
             <h6>

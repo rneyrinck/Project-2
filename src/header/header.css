@@ -1,6 +1,9 @@
 header .dropdown {
   background-color: #1d2e3e;
 }
+div.navbar-nav {
+  gap: 10px;
+}
 div.navbar-nav a {
   border-radius: 0 0 5px 5px;
   font-family: Inter;
@@ -10,14 +13,18 @@ div.navbar-nav a {
   line-height: 22px;
   text-decoration: none;
   margin: 20px 0px;
-  /* identical to box height */
-
   text-align: center;
-
   color: #95989b;
 }
+header .navbar-collapse.collapse {
+  background-color: #212529;
+}
+.navbar-collapse.collapse {
+  align-items: flex-end;
+  justify-content: end;
+  padding-right: 10px;
+}
 button.navbar-toggler.collapsed {
-  /* text-align: right; */
   justify-content: flex-end;
   border: none;
 }
@@ -26,12 +33,27 @@ button.navbar-toggler {
   width: auto;
 }
 
-.navbar{
-    grid-row: 1/2;
-    height: 120px;
+.navbar {
+  grid-row: 1/2;
+  height: 120px;
+  flex-wrap: nowrap;
 }
-header .navbar-nav{
-    background-color: #212529;
-    /* width:100%; */
-
+header .navbar-nav {
+  background-color: #212529;
+}
+.navbar-brand {
+  text-align: left;
+  font-size: 18px;
+  font-family: Nico Moji;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 18px;
+}
+.sub-title {
+  font-family: OCR A Extended;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 17px;
 }

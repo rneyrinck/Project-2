@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import { Route, Routes } from "react-router";
 import About from "./about/about";
 import "./App.css";
@@ -8,26 +8,18 @@ import Header from "./header/header";
 import MyCollection from "./myCollection/myCollection";
 
 function App() {
-  const urlGalaxy = "https://images-api.nasa.gov/search?media_type=image&q=galaxy&page=";
+  const urlGalaxy =
+    "https://images-api.nasa.gov/search?media_type=image&q=galaxy&page=";
 
-  // set state for GalaxyList data info
   const [galaxyList, setGalaxyList] = useState([]);
 
-  // set state for galaxy card generated
-  const [galaxyCardData, setGalaxyCardData] = useState()
+  const [galaxyCardData, setGalaxyCardData] = useState();
 
-  const [collectionData, setCollectionData] = useState([])
-  const [cardToAdd, setCardToAdd] = useState({})
- 
+  const [collectionData, setCollectionData] = useState([]);
+  const [cardToAdd, setCardToAdd] = useState({});
 
-
-  // function for random selection of galaxy items after api call
-  // create function that uses fetch to call the nasa api
   const getGalaxyAPI = () => {
-
     const randomPage = () => {
-      // resource for MATH https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/random
-
       let min = Math.ceil(1);
       let max = Math.floor(18);
       let pageMath = Math.floor(Math.random() * (max - min) + min);
@@ -47,30 +39,44 @@ function App() {
       .then((res) => res.json())
 
       .then((data) => setGalaxyList(data.collection.items))
-      .then(()=>setGalaxyCardData(galaxyList[randomGalaxyChoice]))
+      .then(() => setGalaxyCardData(galaxyList[randomGalaxyChoice]))
       .catch(() => console.log("issue in getGalaxyAPI, App.js line 38"));
   };
   const addToCollection = () => {
-    setCardToAdd(galaxyCardData)
+    setCardToAdd(galaxyCardData);
 
-    const copy = [...collectionData]
-    copy.push(galaxyCardData)
-    setCollectionData(copy)
-    console.log(collectionData)
-    
-  }
-  // console.log(galaxyCard)
-  // take that getgalaxyAPI functin and send it to the button component
-  // onclick in button component activate that fetch function
-  // send it back up the tree to APP then back to galaxy card to populate name and image
-  // because there will only be one component at a time we only need one state
+    const copy = [...collectionData];
+    copy.push(galaxyCardData);
+    setCollectionData(copy);
+    console.log(collectionData);
+  };
+
   return (
     <div className="App">
       <Header />
       <Routes>
-        <Route path="/Project-2//*" element={<Generator getGalaxyAPI={getGalaxyAPI} galaxyCardData={galaxyCardData} collectionData={collectionData} setCollectionData={setCollectionData} addToCollection={addToCollection}/>}/>
-        <Route path="/Project-2/myCollection" element={<MyCollection collectionData={collectionData} setCollectionData={setCollectionData}/>}/>
-        <Route path="/Project-2/about" element={<About/>}/>
+        <Route
+          path="/Project-2//*"
+          element={
+            <Generator
+              getGalaxyAPI={getGalaxyAPI}
+              galaxyCardData={galaxyCardData}
+              collectionData={collectionData}
+              setCollectionData={setCollectionData}
+              addToCollection={addToCollection}
+            />
+          }
+        />
+        <Route
+          path="/Project-2/myCollection"
+          element={
+            <MyCollection
+              collectionData={collectionData}
+              setCollectionData={setCollectionData}
+            />
+          }
+        />
+        <Route path="/Project-2/about" element={<About />} />
       </Routes>
       <Footer />
     </div>

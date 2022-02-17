@@ -1,34 +1,27 @@
-
-
-
-.hero{
-  
+.hero {
   display: flex;
   align-items: baseline;
-  border: 1px solid #25262E;
+  border: 1px solid #25262e;
   border-radius: 5px;
   gap: 20px;
   padding: 10px;
   justify-content: baseline;
-  /* flex-direction: column; */
   background-color: #25262e26;
 }
-.hero a{
+.hero a {
   text-decoration: none;
-  color: #25262E;
+  color: #25262e;
   font-style: normal;
-font-weight: 500;
-font-size: 20px;
-line-height: 24px;
-
-
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 24px;
 }
-.hero h6{
-  font-family: Inter;
-    font-style: normal;
-    font-weight: 500;
-    font-size: 20px;
-    line-height: 24px;
-    text-align: center;
-    color: #25262E;
+.hero h6 {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 24px;
+  text-align: center;
+  color: #25262e;
 }

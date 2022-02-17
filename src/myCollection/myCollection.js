@@ -1,13 +1,7 @@
 import { useState } from "react";
-import { Card, Container, Nav, Navbar } from "react-bootstrap";
-import { propTypes } from "react-bootstrap/esm/Image";
-import {
-  BsBookmarkPlus,
-  BsChevronDown,
-  BsDownload,
-  BsShare,
-} from "react-icons/bs";
-import './myCollection.css'
+import { Button, Card, OverlayTrigger, Popover } from "react-bootstrap";
+
+import "./myCollection.css";
 
 const MyCollection = (props) => {
   const [collectionHTML, setCollectionHTML] = useState(
@@ -25,24 +19,19 @@ const MyCollection = (props) => {
                 <Card.Header>{items.data[0].title}</Card.Header>
                 <Card.Img variant="top" src={items.links[0].href} />
                 <Card.Body>
-                  <Navbar expand="lg">
-                    <Container fluid>
-                      <Navbar.Toggle aria-controls="navbarScroll">
-                        <Navbar.Brand>
-                          Learn more <BsChevronDown />
-                        </Navbar.Brand>{" "}
-                      </Navbar.Toggle>
-                      <Navbar.Collapse id="navbarScroll">
-                        <Nav
-                          className="me-auto my-2 my-lg-0"
-                          style={{ maxHeight: "100px" }}
-                          navbarScroll
-                        >
-                          <Card.Text>{items.data[0].description}</Card.Text>
-                        </Nav>
-                      </Navbar.Collapse>
-                    </Container>
-                  </Navbar>
+                  <OverlayTrigger
+                    trigger="click"
+                    overlay={
+                      <Popover id={`popover-positioned-top`}>
+                        <Popover.Header as="h3">
+                          {items.data[0].title}
+                        </Popover.Header>
+                        <Popover.Body>{items.data[0].description}</Popover.Body>
+                      </Popover>
+                    }
+                  >
+                    <Button variant="secondary">More info</Button>
+                  </OverlayTrigger>
                 </Card.Body>
               </Card>
             </>

@@ -1,5 +1,4 @@
 .App {
-  /* margin: -10px; */
   text-align: center;
   height: 120vh;
   width: 100vw;
@@ -7,8 +6,8 @@
   flex-direction: column;
   grid-template-columns: 1fr;
   grid-template-rows: 90px, 800px, 90px;
-  background: #C7C7C7;
+  background: #c7c7c7;
 }
-html{
-  background-color: #C7C7C7;
+html {
+  background-color: #c7c7c7;
 }
