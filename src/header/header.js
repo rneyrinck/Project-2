@@ -5,7 +5,7 @@ import About from "../about/about";
 import "./header.css";
 import GeneratorBtn from "../generatorbtn/generatorBtn";
 import { AiOutlineMenu } from "react-icons/ai";
-import 'bootstrap/dist/css/bootstrap.min.css';
+import "bootstrap/dist/css/bootstrap.min.css";
 import { Container, Dropdown, Nav, Navbar, NavDropdown } from "react-bootstrap";
 const Header = () => {
   // const dropDown = () => {
@@ -21,29 +21,30 @@ const Header = () => {
   //   );
   // };
   return (
-    
-     <Navbar variant="dark" bg="dark" expand="lg">
-  <Container fluid>
-    <Navbar.Brand href="#home">Galaxy<br/><span>Trading Cards</span></Navbar.Brand>
-    <Navbar.Toggle aria-controls="navbar-dark-example"></Navbar.Toggle>
-    <Navbar.Collapse id="navbar-dark-example">
-      <Nav>
-        {/* <NavDropdown
-          id="nav-dropdown-dark-example"
-          title="Dropdown"
-          menuVariant="dark"
-        > */}
-          <Dropdown.Item href="/Project-2">Home</Dropdown.Item>
-          <Dropdown.Item href="/Project-2">Generate</Dropdown.Item>
-          <Dropdown.Item href="/Project-2/my-collection">My Collection</Dropdown.Item>
-          <Dropdown.Divider />
-          <Dropdown.Item href="/Project-2/about">About</Dropdown.Item>
-        {/* </NavDropdown> */}
-      </Nav>
-    </Navbar.Collapse>
-  </Container>
-</Navbar>
-    
+    <Navbar variant="dark" bg="dark" expand="lg">
+      <Container fluid>
+        <Navbar.Brand href="#home">
+          Galaxy
+          <br />
+          <span>Trading Cards</span>
+        </Navbar.Brand>
+        <Navbar.Toggle aria-controls="navbar-dark-example"></Navbar.Toggle>
+        <Navbar.Collapse id="navbar-dark-example">
+          <Nav>
+           <Link to='/'>Generate</Link>
+           <Link to='/about'>About</Link>
+            {/* <Dropdown.Item href="/Project-2">Home</Dropdown.Item>
+            <Dropdown.Item href="/Project-2">Generate</Dropdown.Item>
+            <Dropdown.Item href="/Project-2/my-collection">
+              My Collection
+            </Dropdown.Item>
+            <Dropdown.Divider />
+            <Dropdown.Item href="/Project-2/about">About</Dropdown.Item>
+            </NavDropdown> */}
+          </Nav>
+        </Navbar.Collapse>
+      </Container>
+    </Navbar>
   );
 };
 export default Header;
@@ -55,11 +56,11 @@ export default Header;
 //   <nav>
 //  <Link to="/About" className='nav about-link'>About</Link>
 //  <Link to="/" className='nav gen-link' >Generator</Link>
-// </nav> 
+// </nav>
 // <Dropdown >
 //  <Dropdown.Toggle variant="success" id="dropdown-basic" >
 // <AiOutlineMenu/>
-   
+
 //  </Dropdown.Toggle>
 
 //  <Dropdown.Menu>
@@ -68,4 +69,3 @@ export default Header;
 //    <Dropdown.Item href="#/action-3">Something else</Dropdown.Item>
 //  </Dropdown.Menu>
 // </Dropdown>
-

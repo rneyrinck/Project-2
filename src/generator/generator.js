@@ -18,8 +18,9 @@ import {
   BsShare,
   BsChevronDown,
 } from "react-icons/bs";
-
+import { IoMdColorWand } from "react-icons/io";
 import GalaxyCard from "../galaxyCard/galaxyCard";
+import MyCollection from "../myCollection/myCollection";
 
 import "./generator.css";
 const Generator = (props) => {
@@ -31,7 +32,6 @@ const Generator = (props) => {
 
   const APICall = () => {
     props.getGalaxyAPI();
-    var node = document.getElementById("my-node");
 
     if (props.galaxyCardData) {
       setGalaxyCardHTML(
@@ -44,7 +44,7 @@ const Generator = (props) => {
                 <Container fluid>
                   <Navbar.Toggle aria-controls="navbarScroll">
                     <Navbar.Brand>
-                     Learn more <BsChevronDown/>
+                      Learn more <BsChevronDown />
                     </Navbar.Brand>
                   </Navbar.Toggle>
                   <Navbar.Collapse id="navbarScroll">
@@ -79,7 +79,7 @@ const Generator = (props) => {
     } else {
       setGalaxyCardHTML(
         <Card>
-          <Card.Body>Click one more time!</Card.Body>
+          <Card.Body>Double Click!</Card.Body>
         </Card>
       );
     }
@@ -87,11 +87,19 @@ const Generator = (props) => {
 
   return (
     <section className="generator">
-      <GalaxyCard galaxyCardHTML={galaxyCardHTML} />
+      {galaxyCardHTML}
 
       <button onClick={APICall}>
-        <span className="span-icon"></span> GENERATE
+        <span className="span-icon">
+          <IoMdColorWand />
+        </span>{" "}
+        GENERATE
       </button>
+      <div>
+        <h3>My Collection</h3>
+        
+        <MyCollection />
+      </div>
     </section>
   );
 };

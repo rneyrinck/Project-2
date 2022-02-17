@@ -3,10 +3,8 @@ import { Route, Routes } from "react-router";
 import About from "./about/about";
 import "./App.css";
 import Footer from "./footer/footer";
-import GalaxyCard from "./galaxyCard/galaxyCard";
 import Generator from "./generator/generator";
 import Header from "./header/header";
-import Main from "./main/main";
 import MyCollection from "./myCollection/myCollection";
 
 function App() {
@@ -23,7 +21,6 @@ function App() {
  
 
 
-  // randomPage()
   // function for random selection of galaxy items after api call
   // create function that uses fetch to call the nasa api
   const getGalaxyAPI = () => {
@@ -34,22 +31,17 @@ function App() {
       let min = Math.ceil(1);
       let max = Math.floor(18);
       let pageMath = Math.floor(Math.random() * (max - min) + min);
-      // console.log(pageMath)
       return pageMath;
     };
     const randomGalaxy = () => {
       let min = Math.ceil(0);
       let max = Math.floor(galaxyList.length);
       let randomGalaxyMath = Math.floor(Math.random() * (max - min) + min);
-      // console.log(randomGalaxyMath)
       return randomGalaxyMath;
     };
     const randomPageChoice = randomPage();
-    // console.log(randomPageChoice)
     const randomGalaxyChoice = randomGalaxy();
-    // console.log(randomGalaxyChoice)
     const url = `${urlGalaxy}${randomPageChoice}`;
-    // console.log(url)
 
     fetch(url)
       .then((res) => res.json())
@@ -57,8 +49,6 @@ function App() {
       .then((data) => setGalaxyList(data.collection.items))
       .then(()=>setGalaxyCardData(galaxyList[randomGalaxyChoice]))
       .catch(() => console.log("issue in getGalaxyAPI, App.js line 38"));
-    
-    // console.log(galaxyCard);
   };
   const addToCollection = () => {
     setCardToAdd(galaxyCardData)
@@ -69,7 +59,6 @@ function App() {
     console.log(collectionData)
   }
   // console.log(galaxyCard)
-  // getGalaxyAPI()
   // take that getgalaxyAPI functin and send it to the button component
   // onclick in button component activate that fetch function
   // send it back up the tree to APP then back to galaxy card to populate name and image
@@ -78,11 +67,9 @@ function App() {
     <div className="App">
       <Header />
       <Routes>
-        <Route path="/Project-2/" element={<Generator getGalaxyAPI={getGalaxyAPI} galaxyCardData={galaxyCardData} collectionData={collectionData} setCollectionData={setCollectionData} addToCollection={addToCollection}/>}/>
-        <Route path='/Project-2/about' element={<About/>}/>
-        <Route path='/Project-2/my-collection' element={<MyCollection collectionData={collectionData}/>}/>
+        <Route path="/" element={<Generator getGalaxyAPI={getGalaxyAPI} galaxyCardData={galaxyCardData} collectionData={collectionData} setCollectionData={setCollectionData} addToCollection={addToCollection}/>}/>
+        <Route path='/about' element={<About/>}/>
       </Routes>
-      {/* <Main galaxyList={galaxyList} setGalaxyList={setGalaxyList} galaxyCard={galaxyCard} setGalaxyCard={setGalaxyCard} getGalaxyAPI={getGalaxyAPI} urlGalaxy={urlGalaxy}/> */}
       <Footer />
     </div>
   );
