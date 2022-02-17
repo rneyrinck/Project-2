@@ -31,8 +31,8 @@ const Header = () => {
         <Navbar.Toggle aria-controls="navbar-dark-example"></Navbar.Toggle>
         <Navbar.Collapse id="navbar-dark-example">
           <Nav>
-           <Link to='/'>Generate</Link>
-           <Link to='/about'>About</Link>
+           <Link to='/Project-2/'>Generate</Link>
+           <Link to='/Project-2/about'>About</Link>
             {/* <Dropdown.Item href="/Project-2">Home</Dropdown.Item>
             <Dropdown.Item href="/Project-2">Generate</Dropdown.Item>
             <Dropdown.Item href="/Project-2/my-collection">

@@ -32,7 +32,7 @@ const Generator = (props) => {
 
   const APICall = () => {
     props.getGalaxyAPI();
-
+    collectionLister()
     if (props.galaxyCardData) {
       setGalaxyCardHTML(
         <>
@@ -84,10 +84,103 @@ const Generator = (props) => {
       );
     }
   };
-
+  const [collectionHTML, setCollectionHTML] = useState(
+    <Card>
+    <Card.Body>Saved cards will appear here</Card.Body>
+  </Card>
+  )
+  const collectionLister = () => {
+    if (props.collectionData) {
+      setCollectionHTML(
+      props.collectionData.map((items) => {
+        return (
+          <>
+            <Card key={items.href}>
+              <Card.Header>{items.data[0].title}</Card.Header>
+              <Card.Img variant="top" src={items.links[0].href} />
+              <Card.Body>
+                <Navbar expand="lg">
+                  <Container fluid>
+                    <Navbar.Toggle aria-controls="navbarScroll">
+                      <Navbar.Brand>{items.data[0].title}</Navbar.Brand>
+                    </Navbar.Toggle>
+                    <Navbar.Collapse id="navbarScroll">
+                      <Nav
+                        className="me-auto my-2 my-lg-0"
+                        style={{ maxHeight: "100px" }}
+                        navbarScroll
+                      >
+                        <Card.Text>{items.data[0].description}</Card.Text>
+                      </Nav>
+                    </Navbar.Collapse>
+                  </Container>
+                </Navbar>
+              </Card.Body>
+            </Card>
+            {/* BsBookmarkXFill,BsBookmarkPlus,BsDownload,BsShare */}
+            <div className="socials">
+              <a className="svg_icons" onClick={props.addToCollection}>
+                <BsBookmarkPlus />
+              </a>
+              <a className="svg_icons">
+                <BsDownload />
+              </a>
+              <a className="svg_icons">
+                <BsShare />
+              </a>
+            </div>
+          </>
+        );
+      })
+      )
+    } else {
+      setCollectionHTML(
+        props.collectionData.map((items) => {
+          return (
+            <>
+              <Card key={items.href}>
+                <Card.Header>{items.data[0].title}</Card.Header>
+                <Card.Img variant="top" src={items.links[0].href} />
+                <Card.Body>
+                  <Navbar expand="lg">
+                    <Container fluid>
+                      <Navbar.Toggle aria-controls="navbarScroll">
+                        <Navbar.Brand>{items.data[0].title}</Navbar.Brand>
+                      </Navbar.Toggle>
+                      <Navbar.Collapse id="navbarScroll">
+                        <Nav
+                          className="me-auto my-2 my-lg-0"
+                          style={{ maxHeight: "100px" }}
+                          navbarScroll
+                        >
+                          <Card.Text>{items.data[0].description}</Card.Text>
+                        </Nav>
+                      </Navbar.Collapse>
+                    </Container>
+                  </Navbar>
+                </Card.Body>
+              </Card>
+              {/* BsBookmarkXFill,BsBookmarkPlus,BsDownload,BsShare */}
+              <div className="socials">
+                <a className="svg_icons" onClick={props.addToCollection}>
+                  <BsBookmarkPlus />
+                </a>
+                <a className="svg_icons">
+                  <BsDownload />
+                </a>
+                <a className="svg_icons">
+                  <BsShare />
+                </a>
+              </div>
+            </>
+          );
+        })
+        )
+    }
+  };
   return (
     <section className="generator">
-      {galaxyCardHTML}
+      <GalaxyCard galaxyCardHTML={galaxyCardHTML} />
 
       <button onClick={APICall}>
         <span className="span-icon">
@@ -97,8 +190,8 @@ const Generator = (props) => {
       </button>
       <div>
         <h3>My Collection</h3>
+    <MyCollection collectionHTML={collectionHTML}/>
         
-        <MyCollection />
       </div>
     </section>
   );
