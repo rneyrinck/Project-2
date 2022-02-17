@@ -33,11 +33,11 @@ const Header = () => {
           title="Dropdown"
           menuVariant="dark"
         > */}
-          <Dropdown.Item href="#action/3.3">Home</Dropdown.Item>
-          <Dropdown.Item href="/generator">Generate</Dropdown.Item>
+          <Dropdown.Item href="/Project-2">Home</Dropdown.Item>
+          <Dropdown.Item href="/Project-2">Generate</Dropdown.Item>
           <Dropdown.Item href="#action/3.4">Separated link</Dropdown.Item>
           <Dropdown.Divider />
-          <Dropdown.Item href="/about">About</Dropdown.Item>
+          <Dropdown.Item href="Project-2/about">About</Dropdown.Item>
         {/* </NavDropdown> */}
       </Nav>
     </Navbar.Collapse>

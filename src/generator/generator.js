@@ -16,6 +16,7 @@ import {
   BsBookmarkPlus,
   BsDownload,
   BsShare,
+  BsChevronDown,
 } from "react-icons/bs";
 
 import GalaxyCard from "../galaxyCard/galaxyCard";
@@ -43,7 +44,7 @@ const Generator = (props) => {
                 <Container fluid>
                   <Navbar.Toggle aria-controls="navbarScroll">
                     <Navbar.Brand>
-                      {props.galaxyCardData.data[0].title}
+                     Learn more <BsChevronDown/>
                     </Navbar.Brand>
                   </Navbar.Toggle>
                   <Navbar.Collapse id="navbarScroll">
