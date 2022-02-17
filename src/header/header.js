@@ -37,7 +37,7 @@ const Header = () => {
           <Dropdown.Item href="/Project-2">Generate</Dropdown.Item>
           <Dropdown.Item href="/Project-2/my-collection">My Collection</Dropdown.Item>
           <Dropdown.Divider />
-          <Dropdown.Item href="/about">About</Dropdown.Item>
+          <Dropdown.Item href="/Project-2/about">About</Dropdown.Item>
         {/* </NavDropdown> */}
       </Nav>
     </Navbar.Collapse>

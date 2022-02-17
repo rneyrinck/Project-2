@@ -79,8 +79,8 @@ function App() {
       <Header />
       <Routes>
         <Route path="/Project-2/" element={<Generator getGalaxyAPI={getGalaxyAPI} galaxyCardData={galaxyCardData} collectionData={collectionData} setCollectionData={setCollectionData} addToCollection={addToCollection}/>}/>
-        <Route path='Project-2/about' element={<About/>}/>
-        <Route path='Project-2/my-collection' element={<MyCollection collectionData={collectionData}/>}/>
+        <Route path='/Project-2/about' element={<About/>}/>
+        <Route path='/Project-2/my-collection' element={<MyCollection collectionData={collectionData}/>}/>
       </Routes>
       {/* <Main galaxyList={galaxyList} setGalaxyList={setGalaxyList} galaxyCard={galaxyCard} setGalaxyCard={setGalaxyCard} getGalaxyAPI={getGalaxyAPI} urlGalaxy={urlGalaxy}/> */}
       <Footer />
