@@ -1,0 +1,10 @@
+.App {
+  /* margin: -10px; */
+  text-align: center;
+  height: 100vh;
+  width: 100vw;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1rem, 800px, 1rem;
+  background: #C7C7C7;
+}
