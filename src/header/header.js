@@ -21,6 +21,7 @@ const Header = () => {
   //   );
   // };
   return (
+    <header>
     <Navbar variant="dark" bg="dark" expand="lg">
       <Container fluid>
         <Navbar.Brand href="#home">
@@ -28,10 +29,11 @@ const Header = () => {
           <br />
           <span>Trading Cards</span>
         </Navbar.Brand>
-        <Navbar.Toggle aria-controls="navbar-dark-example"></Navbar.Toggle>
+        <Navbar.Toggle aria-controls="navbar-dark-example" ></Navbar.Toggle>
         <Navbar.Collapse id="navbar-dark-example">
           <Nav>
            <Link to='/Project-2/'>Generate</Link>
+           <Link to='/Project-2/myCollection'>My Collection</Link>
            <Link to='/Project-2/about'>About</Link>
             {/* <Dropdown.Item href="/Project-2">Home</Dropdown.Item>
             <Dropdown.Item href="/Project-2">Generate</Dropdown.Item>
@@ -45,6 +47,7 @@ const Header = () => {
         </Navbar.Collapse>
       </Container>
     </Navbar>
+    </header>
   );
 };
 export default Header;

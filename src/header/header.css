@@ -1,69 +1,37 @@
-.dropdown{
-    color: #95989B;
+header .dropdown {
+  background-color: #1d2e3e;
 }
-div.navbar-nav{
-    border-radius: 0 0 5px 5px;
+div.navbar-nav a {
+  border-radius: 0 0 5px 5px;
+  font-family: Inter;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 22px;
+  text-decoration: none;
+  margin: 20px 0px;
+  /* identical to box height */
+
+  text-align: center;
+
+  color: #95989b;
 }
-button.navbar-toggler.collapsed{
-    /* text-align: right; */
-    justify-content: flex-end;
-    border: none;
+button.navbar-toggler.collapsed {
+  /* text-align: right; */
+  justify-content: flex-end;
+  border: none;
 }
-button.navbar-toggler{
-    justify-content: end;
-    width: auto;
-}
-a.navbar-brand{
-    text-align: left;
-}
-a.dropdown-item{
-    color: #95989B;
-}
-.nav{
-    width: 100vw;
+button.navbar-toggler {
+  justify-content: end;
+  width: auto;
 }
 
-/* header{
-    background: #35427048;
-    background-blend-mode: revert;
-    height: 6rem;
-    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.411);
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
+.navbar{
+    grid-row: 1/2;
+    height: 120px;
 }
-nav{
-    display: flex;
-    justify-content: space-between;
-    gap: 10px;
-    align-self: center;
-    align-items: baseline;
+header .navbar-nav{
+    background-color: #212529;
+    /* width:100%; */
+
 }
-.gtc-title{
-    color: #CFFF69;
-    text-decoration: none;
-}
-.nav {
-    text-decoration: none;
-}
-.about-link{
-    color: #CCD2E3;
-}
-i{
-    font-size: 24px;
-}
-.btn{
-    background-color: rgba(240, 248, 255, 0.007);
-    color: black;
-    border: 0 none
-} */
-/* button.navbar-toggler{
-    border: 0 none;
-    border-radius: 0;
-    background: none;
-    color: black;
-} */
-/* *{
-    color: #95989B;
-} */

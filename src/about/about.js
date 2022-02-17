@@ -1,33 +1,41 @@
+import { BsLink45Deg, BsLinkedin } from "react-icons/bs";
 import "./about.css";
 
 const About = () => {
   return (
     <section className="about-card">
-      <div className="main-text">
+      <div className="title-explainer">
         <h1>About</h1>
         <p>
-          This app implements NASA's images and videos API to generate a trading
-          card game inspired galaxy card.
+          This app implements{" "}
+          <a href="https://api.nasa.gov/" target="_blank">
+            NASA's images and videos API
+          </a>{" "}
+          and uses react, react-bootstrap, and the react icons library for
+          styling.
           <br />
           <br />
-          In the future iterations a feature to download favorite cards, add
-          them to a collection, or even turn them into nft collectibles are all
-          on the horizon.
+         This is the first fully fleshed out app I've made and I learned alot during the process! In future projects, and continued iteration on this app, I'm looking forward to leaning into react-bootstrap for layout and responsive design.  
           <br />
           <br />
-          Check out some of my other projects in my portfolio by clicking on my picture below.
+          Check out some of my other projects by clicking on my portfolio link
+          below or click my name to connect on LinkedIn.
         </p>
-      </div>
-      <div className="img-hero">
-        <a href="https://rneyrinck.github.io/Portfolio.v.2/"><img
-          src="https://rneyrinck.github.io/Portfolio/me3.png"
-          alt="pic-o-bob"
-        /></a>
-        <div className="img-text">
-          <h6>Robert Neyrinck</h6>
-          <p>Software Engineer</p>
+        <div className="hero">
+          {/* <img src={process.env.PUBLIC_URL+"./me3.png"} /> */}
+
+          <a href="https://www.linkedin.com/in/robert-neyrinck" target="_blank">
+            {" "}
+            <h6>
+              <BsLinkedin /> Robert Neyrinck{" "}
+            </h6>{" "}
+          </a>
+
+          <a target="_blank" href="https://rneyrinck.github.io/Portfolio.v.2/">
+            <BsLink45Deg className="svg_icons" /> Portfolio{" "}
+          </a>
         </div>
-      </div>
+      </div>{" "}
     </section>
   );
 };

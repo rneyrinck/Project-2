@@ -1,11 +1,23 @@
 footer{
-    background-color: #0C0C0C;
+    background-color: #F2F5FF;
     color: #747E5E;
     height: 6rem;
+    width: 100%;
     bottom: 0;
     display: flex;
     justify-content: center;
     align-items: center;
     align-self: flex-end ;
-    
+    justify-self: flex-end;
+   
+}
+footer h5{
+    font-family: OCR A Extended;
+font-style: normal;
+font-weight: normal;
+font-size: 13px;
+line-height: 13px;
+text-align: center;
+
+color: #525D83;
 }

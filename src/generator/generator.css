@@ -22,7 +22,8 @@ button{
     display: flex;
     flex-direction: column;
     align-items: center;
-    /* height: 644px; */
+    /* height: 100vh; */
+    
 }
 .card{
     border-radius: 15px ;
@@ -40,4 +41,20 @@ button{
 .svg_icons{
     transform: scale(1.8);
     color: #171328;
+}
+p.card-text{
+    
+}
+.collapse.show{
+    background-color: #F2F5FF;
+
+
+    width: 254px;
+}
+.generator-components{
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    align-items: center;
+    
 }

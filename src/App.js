@@ -57,6 +57,7 @@ function App() {
     copy.push(galaxyCardData)
     setCollectionData(copy)
     console.log(collectionData)
+    
   }
   // console.log(galaxyCard)
   // take that getgalaxyAPI functin and send it to the button component
@@ -67,7 +68,8 @@ function App() {
     <div className="App">
       <Header />
       <Routes>
-        <Route path="/" element={<Generator getGalaxyAPI={getGalaxyAPI} galaxyCardData={galaxyCardData} collectionData={collectionData} setCollectionData={setCollectionData} addToCollection={addToCollection}/>}/>
+        <Route path="/Project-2//*" element={<Generator getGalaxyAPI={getGalaxyAPI} galaxyCardData={galaxyCardData} collectionData={collectionData} setCollectionData={setCollectionData} addToCollection={addToCollection}/>}/>
+        <Route path="/Project-2/myCollection" element={<MyCollection collectionData={collectionData} setCollectionData={setCollectionData}/>}/>
         <Route path="/Project-2/about" element={<About/>}/>
       </Routes>
       <Footer />
