@@ -7,6 +7,7 @@ import GalaxyCard from "./galaxyCard/galaxyCard";
 import Generator from "./generator/generator";
 import Header from "./header/header";
 import Main from "./main/main";
+import MyCollection from "./myCollection/myCollection";
 
 function App() {
   const urlGalaxy = "https://images-api.nasa.gov/search?media_type=image&q=galaxy&page=";
@@ -79,6 +80,7 @@ function App() {
       <Routes>
         <Route path="/Project-2/" element={<Generator getGalaxyAPI={getGalaxyAPI} galaxyCardData={galaxyCardData} collectionData={collectionData} setCollectionData={setCollectionData} addToCollection={addToCollection}/>}/>
         <Route path='Project-2/about' element={<About/>}/>
+        <Route path='Project-2/my-collection' element={<MyCollection collectionData={collectionData}/>}/>
       </Routes>
       {/* <Main galaxyList={galaxyList} setGalaxyList={setGalaxyList} galaxyCard={galaxyCard} setGalaxyCard={setGalaxyCard} getGalaxyAPI={getGalaxyAPI} urlGalaxy={urlGalaxy}/> */}
       <Footer />

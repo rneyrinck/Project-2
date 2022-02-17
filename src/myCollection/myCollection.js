@@ -1,3 +1,6 @@
+import { Card, Container, Nav, Navbar } from "react-bootstrap";
+import { BsBookmarkPlus, BsDownload, BsShare } from "react-icons/bs";
+
 const MyCollection = (props) => {
   const collectionList = props.collectionData.map((items) => {
     return (
