@@ -206,9 +206,31 @@ Other libraries like Axios, reactstrap, d3, etc
 
 ## Code Snippet
 
-describe some code youre proud of! No greater than 10 lines
+This is the code for determining a randomly generated page for the url, and then randomly determining a data item in what is returned.
 
 ```
-<h1>hello world!</h1>
+ const randomPage = () => {
+      let min = Math.ceil(1);
+      let max = Math.floor(18);
+      let pageMath = Math.floor(Math.random() * (max - min) + min);
+      return pageMath;
+    };
+    const randomGalaxy = () => {
+      let min = Math.ceil(0);
+      let max = Math.floor(galaxyList.length);
+      let randomGalaxyMath = Math.floor(Math.random() * (max - min) + min);
+      return randomGalaxyMath;
+    };
+    const randomPageChoice = randomPage();
+    const randomGalaxyChoice = randomGalaxy();
+    const url = `${urlGalaxy}${randomPageChoice}`;
+
+    fetch(url)
+      .then((res) => res.json())
+
+      .then((data) => setGalaxyList(data.collection.items))
+      .then(() => setGalaxyCardData(galaxyList[randomGalaxyChoice]))
+      .catch(() => console.log("issue in getGalaxyAPI, App.js line 38"));
+  };
 
 ```
