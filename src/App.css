@@ -11,3 +11,21 @@
 html {
   background-color: #c7c7c7;
 }
+button.btn-secondary{
+  font-family: "inter";
+  color: white;
+  background-color: #5667FF;
+  border-radius: 5px;
+  height: fit-content;
+  
+}
+button.main-btn{
+  border-radius: 5px;
+  font: 'inter';
+  font-weight: 600;
+  letter-spacing: .25px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #F6F8FF;
+}

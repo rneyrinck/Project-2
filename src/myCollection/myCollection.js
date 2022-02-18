@@ -57,7 +57,7 @@ const MyCollection = (props) => {
           below to see what you've saved!
         </p>
       </div>{" "}
-      <button onClick={collectionLister}>Show Collection</button>
+      <button onClick={collectionLister} className='main-btn'>Show Collection</button>
       <div className="collection-list">{collectionHTML}</div>
     </section>
   );

@@ -8,9 +8,7 @@ const Header = () => {
       <Navbar variant="dark" bg="dark" expand="lg">
         <Container fluid>
           <Navbar.Brand href="#home">
-            Galaxy
-            <br />
-            <span className="sub-title">Trading Cards</span>
+            GALAXY TRADING CARDS
           </Navbar.Brand>
           <Navbar.Toggle aria-controls="navbar-dark-example"></Navbar.Toggle>
           <Navbar.Collapse id="navbar-dark-example">

@@ -33,8 +33,9 @@ button {
   margin: 30px;
 }
 .svg_icons {
-  transform: scale(2);
+  transform: scale(1.8);
   color: #171328;
+  padding-bottom: 6px;
 }
 
 .collapse.show {
@@ -46,4 +47,24 @@ button {
   flex-direction: column;
   gap: 15px;
   align-items: center;
+}
+div.card-body {
+  display: flex;
+  justify-items: center;
+  justify-content: space-between;
+  align-items: center;
+  height: 60px;
+}
+div.card-header {
+  font-family: "inter";
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  padding: 6px 10px;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 15px;
+  line-height: 18px;
+  text-align: center;
+  color: #255247;
 }

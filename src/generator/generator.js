@@ -21,14 +21,12 @@ const Generator = (props) => {
       setGalaxyCardHTML(
         <>
           <Card id="galCard">
-            <Card.Header>
-              {props.galaxyCardData.data[0].title}{" "}
-              <a className="svg_icons" onClick={props.addToCollection}>
-                <BsBookmarkPlus />
-              </a>
-            </Card.Header>
+            <Card.Header>{props.galaxyCardData.data[0].title} </Card.Header>
             <Card.Img variant="top" src={props.galaxyCardData.links[0].href} />
             <Card.Body>
+              <a className="svg_icons" onClick={props.addToCollection}>
+                <BsBookmarkPlus />{" "}
+              </a>
               <OverlayTrigger
                 trigger="click"
                 overlay={
@@ -42,7 +40,7 @@ const Generator = (props) => {
                   </Popover>
                 }
               >
-                <Button variant="secondary">More info</Button>
+                <Button variant="secondary">Learn more</Button>
               </OverlayTrigger>
             </Card.Body>
           </Card>
@@ -107,16 +105,16 @@ const Generator = (props) => {
           <br /> Click on "Learn more" for a dropdown with a description of the
           image.
           <br />
-          Press the bookmark button on anycard to save it to your collection.
+          Press the bookmark button on any card to save it to your collection.
         </p>
       </div>{" "}
       <div className="generator-components">
         <GalaxyCard galaxyCardHTML={galaxyCardHTML} />
-        <button onClick={APICall}>
+        <button onClick={APICall} className="main-btn">
           <span className="span-icon">
             <IoMdColorWand />
           </span>{" "}
-          GENERATE
+          Generate
         </button>
       </div>
       <Routes>
