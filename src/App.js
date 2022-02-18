@@ -56,7 +56,7 @@ function App() {
       <Header />
       <Routes>
         <Route
-          path="/Project-2//*"
+          path="/"
           element={
             <Generator
               getGalaxyAPI={getGalaxyAPI}
@@ -68,7 +68,7 @@ function App() {
           }
         />
         <Route
-          path="/Project-2/myCollection"
+          path="/myCollection"
           element={
             <MyCollection
               collectionData={collectionData}
@@ -76,7 +76,7 @@ function App() {
             />
           }
         />
-        <Route path="/Project-2/about" element={<About />} />
+        <Route path="/about" element={<About />} />
       </Routes>
       <Footer />
     </div>
